@@ -1,0 +1,12 @@
+﻿Question 4
+
+In a system comprising of 3 components: A, B, C. Calling A requires calling B, and calling B requires calling A. Component C is responsible for dissimilar tasks T#1, T#2, and T#3.
+
+
+a-Comment on the modifiability of this system. What are the problems that you see in this system, and how you solve them?
+
+The modifiability of the system is poor due to tightly coupled artifacts. This means that if we want to change component A we also need to consider how those changes will reflect in component B and C and how that will effect the quality and function of the how the tasks are executed. Also such dependencies can potentially cause platform dependencies. Lastly the modifiability of the system needs to take a better scope of the predicted changes and their opportunity cost, this generic example does not have such expectations.
+
+b-Suppose that T#1 is performed by both component A and C? What does it say about A and C? How you solve this problem?
+
+If T#1 is a shared responsibility of both components then A and C have high coupling which is terrible for their modifiablility because incoming changes need to be applied onto both modules and that can cause even more issues. An appropriate solution is to encapsulate the components such that they each have separate responsibilities and stimulus, thus creating a lower coupling.

@@ -1,0 +1,15 @@
+5a:
+Performance is a quality that is greatly affected by the system’s architecture. in a client server Trent Course Registration System, you can improve performance by carefully managing request processing, resource usage, and communication between the client and the server. 
+One key improvement is to increase concurency on the server. during course registration, many students access the system simultaneously. the server should be able to handle multiple requests at the same time rather than processing them one by one. this cuts down on waiting time and boosts response time during busy periods. 
+Another strategy is to reduce unneccesary communication between the client and the server. For instance, instead of sending many small requests, the system can combine operations or store frequently accessed data, like course lists. this minimizes network load and boosts overall system performance. 
+The system should also effectively manage resource demand. it can limit the number of requests processed at once and prioritize critical tasks, like registration, over less important ones. efficient data structures and algorithms should be used when checking course availability. proper scheduling and queue management are especially crucial during peak traffic times. 
+Overall , you can improve performance by increasing parallel processing, reducing communication load, and managing system resources effectively, especially during busy registration periods.
+
+
+5b:
+Availability refers to the ability of a system to continue providing service by masking or repairing faults so that they do not become failures. to achieve greater availability of the server in a Trent Course Registration System, the architecture should use tactics for detecting faults and recovering from them quickly.
+First, the system should use fault detection tactics such as heartbeat, timeout, and self testings. these tactics help the system detect when the server has failed or is not responding correctly.
+Second, the system should use recovery tactics such as active redundancy or passive redundancy. in active redundancy, a hot spare server processes the same inputs in parallel and can take over almost immediately if the main server fails. In passive redundancy, a warm spare server receives periodic state updates and can take over with some delay. These tactics improve server availability by reducing downtime.
+Additional tactics such as retry, exception handling, rollback, and reconfiguration can also be used. Retry can help when a fault is temporary, rollback can return the system to a previous correct state, and reconfiguration can assign responsibilities to the remaining working resources so that the system can continue to provide at least its most important services.
+Overall, greater server availability can be achieved by combining fault detection tactics with recovery tactics, especially redundancy tactics such as hot spare or warm spare servers, so that the registration system continues operating with minimal downtime.
+
